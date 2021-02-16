@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>POLLS</h1>
+  <div class="rows">
+    {% for poll in polls %}
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ poll.image_url }}" class="card-img-top" alt="{{ poll.image_url }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ poll.name }}</h5>
+          <p class="card-text">N{{ poll.price }}</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
